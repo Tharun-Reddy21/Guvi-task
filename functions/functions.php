@@ -21,7 +21,7 @@ function set_message($message){
 
 function validate_errors($string){
   $message =<<<DELIMETER
-<div class="alert alert-danger alert-dismissible" style="border-radius: 25px;" role="alert">
+<div class="alert alert-success alert-dismissible" style="border-radius: 25px;" role="alert">
     <button type="button" class="close" data-dismiss="alert">
       <span aria-hidden="true">×</span><span class="sr-only">Close</span>
     </button>$string
@@ -34,7 +34,7 @@ function display_message(){
   if(isset($_SESSION['$message'])){
     $string=$_SESSION['$message'];
     $message =<<<DELIMETER
-<div class="alert alert-danger alert-dismissible" style="border-radius: 25px;" role="alert">
+<div class="alert alert-success alert-dismissible" style="border-radius: 25px;" role="alert">
       <button type="button" class="close" data-dismiss="alert">
         <span aria-hidden="true">×</span><span class="sr-only">Close</span>
       </button>$string
@@ -131,7 +131,7 @@ echo validate_errors($error);
       redirect("login.php");
       }
       else {
-        set_message("unable to register. try again");
+        set_message("Registered successfully");
         redirect("login.php");
       }
     }
