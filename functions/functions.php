@@ -163,7 +163,7 @@ function register_user($first,$last,$user,$email,$pw){
     $result=query($sql);
 
     $subject="activate account";
-    $headers="From : vishnuthumpudi@gmail.com";
+    $headers="From : tarun3run@gmail.com";
     $msg="please click the link below to activate your account
     http://localhost:8080/login/activate.php?email=$email&code=$validation";
     if(send_email($email,$subject,$msg,$headers)){
