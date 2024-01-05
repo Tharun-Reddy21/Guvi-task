@@ -1,26 +1,15 @@
 $(function(){
 
-
     $("#register_email").on('change', function(){
-
 
     var email = $(this).val();
 
-
-
     $.post("ajax_functions.php", {email : email}, function(data){
-
-
 
         $(".db-feedback").html(data);
 
     });
     });
-
-
-
-
-
 
 
     $('#login-form-link').click(function(e) {
@@ -39,25 +28,12 @@ $(function(){
     });
 
 
-
-    $('#register-form').on('submit',function(){
-
-
-
-        if($('#password').val()!=$('#confirm-password').val()){
-
-
-
-
+    $('#register-form').on('submit',function){
+        if($('#password').val()!=$('#confirm-assword').val()){
         alert("Passwords don't match");
         return false;
     }
-
         return true;
-
     });
-
-
-
 
 });
